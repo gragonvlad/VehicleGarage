@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleGarage", "VehicleGarage\VehicleGarage.csproj", "{00D3927A-FB70-423C-815B-CA018DE94EBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{4880C5E4-DC9E-411B-8AC6-7A06BEF86E2C}"
@@ -26,8 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|Mixed Platforms.Build.0 = Release|Any CPU
 		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|x86.ActiveCfg = Debug|x86
 		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Debug|x86.Build.0 = Debug|x86
 		{00D3927A-FB70-423C-815B-CA018DE94EBD}.Release|Any CPU.ActiveCfg = Release|x86

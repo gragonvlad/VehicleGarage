@@ -30,7 +30,7 @@ namespace VehicleGarage.SQLStores
         {
             var dict = new Dictionary<int, CreatureTemplate>();
 
-            using (var command = new MySqlCommand("SELECT entry,name,npcflag,unit_flags,dynamicflags,VehicleId,AIName,InhabitType,ScriptName,WDBVerified FROM creature_template WHERE VehicleId <>0", _conn))
+            using (var command = new MySqlCommand("SELECT entry,name,npcflag,unit_flags,dynamicflags,vehicle_id,AIName,InhabitType,ScriptName FROM creature_template WHERE vehicle_id <>0", _conn))
             {
                 using (var reader = command.ExecuteReader())
                 {
@@ -47,7 +47,6 @@ namespace VehicleGarage.SQLStores
                                                         AIName = reader[6].ToString(),
                                                         InhabitType = reader[7].ToUInt32(),
                                                         ScriptName = reader[8].ToString(),
-                                                        WDBVerified = reader[9].ToUInt32()
                                                     };
 
                         dict[creatureTemplate.Id.ToInt32()] = creatureTemplate;
@@ -62,7 +61,7 @@ namespace VehicleGarage.SQLStores
         {
             var dict = new Dictionary<uint, List<int>>();
 
-            using (var command = new MySqlCommand("SELECT npc_entry,spell_id FROM npc_spellclick_spells AS sc LEFT JOIN creature_template AS ct ON sc.npc_entry = ct.entry WHERE ct.VehicleId <>0", _conn))
+            using (var command = new MySqlCommand("SELECT npc_entry,spell_id FROM npc_spellclick_spells AS sc LEFT JOIN creature_template AS ct ON sc.npc_entry = ct.entry WHERE ct.vehicle_id <>0", _conn))
             {
                 using (var reader = command.ExecuteReader())
                 {
@@ -84,7 +83,7 @@ namespace VehicleGarage.SQLStores
         {
             var dict = new Dictionary<uint, List<VehicleTemplateAccessory>>();
 
-            using (var command = new MySqlCommand("SELECT entry,accessory_entry, CAST(seat_id AS UNSIGNED INTEGER) FROM vehicle_template_accessory", _conn))
+            using (var command = new MySqlCommand("SELECT entry,accessory_entry, CAST(seat_id AS UNSIGNED INTEGER) FROM vehicle_accessory", _conn))
             {
                 using (var reader = command.ExecuteReader())
                 {
@@ -104,7 +103,7 @@ namespace VehicleGarage.SQLStores
                     }
                 }
             }
-
+            
             return dict;
         }
 
